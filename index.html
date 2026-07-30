@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Decryptor Tool By Anand Shukla</title>
+    <script src="https://cdn.jsdelivr.net/npm/node-forge@1.3.1/dist/forge.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Hybrid Response Decryptor Tool</h2>
+        <hr>
+
+        <div class="form-group">
+            <label for="xClientSign">xClientSignature (or Key source):</label>
+            <input type="text" id="xClientSign" placeholder="Paste xClientSignature here...">
+        </div>
+
+        <div class="form-group">
+            <label for="rsaPvtKey">RSA private key to decrypt the client signature</label>
+            <input type="text" id="rsaPvtKey" placeholder="Paste RSA private key here...">
+        </div>
+        <div class="form-group">
+            <label for="IV">Enter you IV here</label>
+            <input type="text" id="IV" placeholder="Paste IV here...">
+        </div>
+        <div class="form-group">
+            <label for="encryptedData">Encrypted Response Data:</label>
+            <textarea id="encryptedData" placeholder="Paste the encrypted message string here..."></textarea>
+        </div>
+
+        <button class="btn-primary" onclick="handleDecryption()">Decrypt Data</button>
+
+        <div class="output-header">
+            <h3>Decrypted JSON Output:</h3>
+            <div>
+                <button class="btn-secondary" onclick="copyToClipboard()">Copy JSON</button>
+                <span id="copyToast" class="success-toast" style="display: none;">Copied!</span>
+            </div>
+        </div>
+
+        <pre id="outputResult">Your decrypted output will appear here...</pre>
+
+        <script src="decryptWithHtml.js">
+
+        </script>
+    </div>
+
+</body>
+
+</html>
