@@ -1,0 +1,38 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  width="512"
+  height="512"
+>
+  <rect width="512" height="512" fill="white"/>
+
+  <!-- A -->
+  <path
+    d="M105 405L220 105H292L407 405H335L306 325H206L177 405H105ZM228 265H284L256 184L228 265Z"
+    fill="#FF6B00"
+  />
+
+  <!-- Sweeping curve -->
+  <path
+    d="M55 325
+       C145 385 225 350 305 295
+       C370 250 425 225 475 235
+       C410 205 350 220 285 255
+       C200 300 125 335 55 325Z"
+    fill="#FF6B00"
+  />
+
+  <!-- AKSHAR -->
+  <text
+    x="256"
+    y="465"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="58"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#FF6B00"
+  >
+    AKSHAR
+  </text>
+</svg>
