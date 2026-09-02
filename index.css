@@ -85,3 +85,35 @@ pre {
     font-weight: bold;
     margin-left: 10px;
 }
+
+#Header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    font-family: sans-serif;
+  }
+  
+  .header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .donate-btn {
+    background-color: #FFDD00;
+    color: #000;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    border: 1px solid #e0c200;
+  }
+
+  .donate-btn:hover {
+    background-color: #ffea4d;
+  }
