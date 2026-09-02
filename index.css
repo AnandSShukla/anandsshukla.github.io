@@ -93,6 +93,7 @@ pre {
     padding: 15px 20px;
     background-color: #f8f9fa;
     font-family: sans-serif;
+    margin-bottom : 24px;
   }
   
   .header-actions {
@@ -111,6 +112,9 @@ pre {
     font-size: 14px;
     transition: background-color 0.2s;
     border: 1px solid #e0c200;
+    display : flex;
+    width : 100%;
+    justify-content : center ;
   }
 
   .donate-btn:hover {
