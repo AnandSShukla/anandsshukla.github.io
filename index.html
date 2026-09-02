@@ -23,12 +23,12 @@
         <hr>
 
         <div class="form-group">
-            <label for="xClientSign">xClientSignature (or Key source):</label>
-            <input type="text" id="xClientSign" placeholder="Paste xClientSignature here...">
+            <label for="xClientSign">RSA Encrypted Key </label>
+            <input type="text" id="xClientSign" placeholder="Paste RSA Encrypted Key here...">
         </div>
 
         <div class="form-group">
-            <label for="rsaPvtKey">RSA private key to decrypt the client signature</label>
+            <label for="rsaPvtKey">RSA Private Key </label>
             <input type="text" id="rsaPvtKey" placeholder="Paste RSA private key here...">
         </div>
         <div class="form-group">
@@ -36,16 +36,16 @@
             <input type="text" id="IV" placeholder="Paste IV here...">
         </div>
         <div class="form-group">
-            <label for="encryptedData">Encrypted Response Data:</label>
+            <label for="encryptedData">Encrypted Data to be decrypted:</label>
             <textarea id="encryptedData" placeholder="Paste the encrypted message string here..."></textarea>
         </div>
 
-        <button class="btn-primary" onclick="handleDecryption()">Decrypt Data</button>
+        <button class="btn-primary" onclick="handleDecryption()">Decrypt</button>
 
         <div class="output-header">
             <h3>Decrypted JSON Output:</h3>
             <div>
-                <button class="btn-secondary" onclick="copyToClipboard()">Copy JSON</button>
+                <button class="btn-secondary" onclick="copyToClipboard()">Copy</button>
                 <span id="copyToast" class="success-toast" style="display: none;">Copied!</span>
             </div>
         </div>
