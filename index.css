@@ -14,6 +14,12 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.headercontainer {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -21,6 +27,7 @@ body {
 label {
     display: block;
     margin-bottom: 8px;
+    font-weight: bold;
     font-weight: bold;
 }
 
@@ -38,6 +45,10 @@ textarea {
     resize: vertical;
     height: 100px;
 }
+    textarea:focus {
+        outline: none;
+        border-color: #2563eb;
+    }
 
 button {
     padding: 10px 20px;
@@ -92,8 +103,8 @@ pre {
     align-items: center;
     padding: 15px 20px;
     background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
     font-family: sans-serif;
-    margin-bottom : 24px;
   }
   
   .header-actions {
@@ -112,11 +123,105 @@ pre {
     font-size: 14px;
     transition: background-color 0.2s;
     border: 1px solid #e0c200;
-    display : flex;
-    width : 100%;
-    justify-content : center ;
   }
 
   .donate-btn:hover {
     background-color: #ffea4d;
   }
+
+  .radioSelection{
+    display: flex;
+    justify-content: space-between;
+    width : 50%;
+  }
+  .radioBox{
+     display: flex;
+      width : 100%;
+justify-content: space-between;
+    align-items: center;
+  }
+  .radioOption{
+     display: flex;
+      width : 50%;
+    align-items: center;
+  }
+  
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px rgba(0,0,0,.08);
+    }
+
+       .settings {
+        background: #f9fafb;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+      .settings div {
+        margin: 6px 0;
+    }
+
+    .settings strong {
+        display: inline-block;
+        width: 150px;
+    }
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    button {
+        flex: 1;
+        padding: 13px;
+        border: 0;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
+        .decrypt {
+        background: #2563eb;
+        color: white;
+    }
+
+    .json {
+        background: #059669;
+        color: white;
+    }
+
+    .copy {
+        background: #6b7280;
+        color: white;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    button:hover {
+        opacity: .9;
+    }
+
+    .output {
+        margin-top: 25px;
+    }
+
+    .status {
+        display: none;
+        margin-top: 15px;
+        padding: 12px;
+        border-radius: 7px;
+    }
+
+    .success {
+        display: block;
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .error {
+        display: block;
+        background: #fee2e2;
+        color: #991b1b;
+    }
