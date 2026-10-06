@@ -11,15 +11,35 @@
 </head>
 
 <body>
+    <div class="headercontainer">
+   <h2>Choose your decryption tool !</h2>
+
+    <div class="radioSelection">
+    
+        <div class="radioBox">
+            <div class="radioOption">
+                <input type="radio" checked id="rsa" value="rsa" name="tool" onclick="onClickRadioSelection(event.target.value)" style="margin-right: 12px;" />
+                <label htmlFor="rsa">RSA Tool</label>
+            </div>
+    
+            <div class="radioOption">
+                <input type="radio" id="aes" value="aes" name="tool" onclick="onClickRadioSelection(event.target.value)"  style="margin-right: 12px;"/>
+                <label htmlFor="aes">AES Tool</label>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
     <div class="container">
-          <div id="Header">
+        <div id="Header" style="display: none;">
             <h2>RSA Decryption Tool</h2>
-             <div class="header-actions">
+            <div class="header-actions">
                 <a href="https://buymeacoffee.com/aksharbramh" target="_blank" class="donate-btn">
                     Support the DEV
                 </a>
             </div>
-          </div>
+        </div>
 
         <div class="form-group">
             <label for="xClientSign">RSA Encrypted Key </label>
@@ -28,16 +48,17 @@
 
         <div class="form-group">
             <label for="rsaPvtKey">RSA Private Key </label>
-            <input type="text" id="rsaPvtKey" placeholder="Paste RSA private key here...">
+            <input type="text" id="rsaPvtKey" placeholder="Enter RSA private key here...">
         </div>
         <div class="form-group">
             <label for="IV">Enter you IV here</label>
-            <input type="text" id="IV" placeholder="Paste IV here...">
+            <input type="text" id="IV" placeholder="Enter IV here...">
         </div>
         <div class="form-group">
             <label for="encryptedData">Encrypted Data to be decrypted:</label>
             <textarea id="encryptedData" placeholder="Paste the encrypted message string here..."></textarea>
         </div>
+
 
         <button class="btn-primary" onclick="handleDecryption()">Decrypt</button>
 
@@ -50,10 +71,64 @@
         </div>
 
         <pre id="outputResult">Your decrypted output will appear here...</pre>
-
         <script src="decryptWithHtml.js">
 
         </script>
+        <script src="aesDeceryptionLogic.js">
+        </script>
+
+    </div>
+
+    <div class="containertwo" style="display:none">
+
+        <div class="card">
+            <div class="form-group">
+                <label for="aesKey">AES-256 Key </label>
+                <input type="text" id="aesKey" placeholder="Enter AES-256 Key here...">
+            </div>
+
+            <div class="form-group">
+                <label for="AESIV">Enter you IV here</label>
+                <input type="text" id="AESIV" placeholder="Enter IV here...">
+            </div>
+
+
+            <label for="encryptedText">
+                Encrypted Text
+            </label>
+
+            <textarea id="encryptedText" placeholder="Paste Base64 encrypted text here..."></textarea>
+
+
+            <div class="buttons">
+                <button class="decrypt" onclick="decryptText(false)">
+                    Decrypt Text
+                </button>
+                <button class="json" onclick="decryptText(true)">
+                    Prettify Output
+                </button>
+            </div>
+
+
+            <div class="output">
+
+                <label for="outputText">
+                    Decrypted Output
+                </label>
+
+                <textarea id="outputText" readonly placeholder="Decrypted result will appear here..."></textarea>
+
+
+                <button class="copy" onclick="copyOutput()">
+                    Copy Output
+                </button>
+
+            </div>
+
+
+            <div id="status"></div>
+
+        </div>
     </div>
 
 </body>
